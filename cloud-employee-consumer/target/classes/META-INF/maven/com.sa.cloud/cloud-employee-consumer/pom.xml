@@ -1,29 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.sa.cloud</groupId>
-  <artifactId>cloud-employee-consumer</artifactId>
-  <version>1.0</version>
-  <packaging>jar</packaging>
+	<groupId>com.sa.cloud</groupId>
+	<artifactId>cloud-employee-consumer</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
 
-  <name>cloud-employee-consumer</name>
-  <url>http://maven.apache.org</url>
+	<name>cloud-employee-consumer</name>
+	<url>http://maven.apache.org</url>
 
- <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
-  
-  <parent>
+
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-  <dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -39,7 +39,26 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbon</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -53,5 +72,5 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 </project>
